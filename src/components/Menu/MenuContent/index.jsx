@@ -1,4 +1,5 @@
 import React from 'react'
+import { Facebook, Instagram, Youtube, Dribbble, Twitch } from "react-feather";
 
 import "./style.scss";
 
@@ -61,7 +62,25 @@ const externalLinks = [
 function MenuContent() {
     return (
         <div className="menu-holder">
-
+            <div className="menu-inside">
+                <div className="menu-nav-container">
+                    <ul className="internal-nav-links">
+                        {internalLinks.map((link) => (
+                            <li key={link.url}>
+                                <a href={link.url}>{link.component}</a>
+                                <img src={link.img} />
+                            </li>
+                        ))}
+                    </ul>
+                    <ul className="external-nav-links">
+                        {externalLinks.map((link) => (
+                            <li key={link.url}>
+                                <a href={link.url}>{link.component}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
