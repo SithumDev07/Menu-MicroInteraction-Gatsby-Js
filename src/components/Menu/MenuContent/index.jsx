@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Facebook, Instagram, Youtube, Dribbble, Twitch } from "react-feather";
+import { MenuContext } from '../MenuManager';
+
+import cn from 'classnames';
 
 import "./style.scss";
 
@@ -60,9 +63,14 @@ const externalLinks = [
 ];
 
 function MenuContent() {
+
+    const { open } = useContext(MenuContext);
+
+
+
     return (
         <div className="menu-holder">
-            <div className="menu-inside">
+            <div className={cn("menu-inside", { open })}>
                 <div className="menu-nav-container">
                     <ul className="internal-nav-links">
                         {internalLinks.map((link) => (
