@@ -28,8 +28,10 @@ body {
         color: #111;
     }
 
-    margin-left: 75px;
-    padding-left: 50px;
-    border-left: 1px solid rgb(116,116,116);
-    width: calc(100vw - 126px);
+    @include mq('tablet', min) {
+            margin-left: 75px;
+            padding-left: 50px;
+            border-left: 1px solid rgb(116,116,116);
+            width: calc(100vw - 126px);
+    }
 }
