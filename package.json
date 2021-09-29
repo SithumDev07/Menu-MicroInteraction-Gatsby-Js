@@ -19,6 +19,7 @@
     "gatsby-plugin-sass": "^4.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9",
     "react-loadable": "^5.5.0",
     "react-mixin": "^5.0.0",
     "sass": "^1.42.1"

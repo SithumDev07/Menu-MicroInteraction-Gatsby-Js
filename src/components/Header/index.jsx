@@ -1,9 +1,14 @@
 import React from 'react'
+import Menu from '../Menu';
+import "./style.scss"
 
 function Header() {
     return (
         <div className="header-wrap">
-            Digital experience design studio
+            <p className="brand-description">
+                Digital experience design studio
+            </p>
+            <Menu />
         </div>
     )
 }
